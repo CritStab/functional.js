@@ -23,6 +23,7 @@ Maybe.prototype.map = function(f) {
         _: () => Maybe.Nothing()
     });
 };
+Maybe.pure(5).map(x => x + 1).value; // => 6
 
 // Tail Recursion
 function factorial(n) {
@@ -32,6 +33,7 @@ function factorial(n) {
     });
     return f.run(1, n);
 }
+factorial(5); // => 120
 
 // Simple Product Types
 var tup = new Tuple(1,2,3);
