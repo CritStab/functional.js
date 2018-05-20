@@ -13,7 +13,7 @@ th.value(); // => 4
 
 // Sum Types
 var Maybe = new Variant({
-    Just: (value) => ({value: value}),
+    Just: (value) => ({value}),
     Nothing: () => ({})
 });
 Maybe.pure = Maybe.Just;
